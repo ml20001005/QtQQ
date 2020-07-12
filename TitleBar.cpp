@@ -66,13 +66,13 @@ void TitleBar::initConnections() {
 	connect(m_pButtonClose, SIGNAL(clicked()), this, SLOT(onButtonCloseClicked()));
 }
 
-void TitleBar::setTitleIcon(QString& filePath) {
+void TitleBar::setTitleIcon(const QString& filePath) {
 	QPixmap titleIcon(filePath);//构造一个位图对象
 	m_pIcon->setFixedSize(titleIcon.size());//用位图对象设置标签固定大小
 	m_pIcon->setPixmap(titleIcon);//对标签设置位图
 }
 
-void TitleBar::setTitleContent(QString& titleContent) {
+void TitleBar::setTitleContent(const QString& titleContent) {
 	m_pTitleContent->setText(titleContent);//标题栏内容标签设置文本
 	m_titleContent = titleContent;//标题栏内容
 }
